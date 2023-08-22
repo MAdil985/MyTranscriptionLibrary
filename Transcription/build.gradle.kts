@@ -49,7 +49,7 @@ dependencies {
 publishing {
     publications {
         create<MavenPublication>("MyTranscriptionLibrary") {
-            groupId = "com.audio.transcription"
+            groupId = "com.github.MAdil985"
             artifactId = "MyTranscriptionLibrary"
             version = "0.0.3"
         }
