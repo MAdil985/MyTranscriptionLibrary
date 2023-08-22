@@ -52,7 +52,6 @@ publishing {
             groupId = "com.audio.transcription"
             artifactId = "MyTranscriptionLibrary"
             version = "0.0.3"
-
         }
     }
     repositories {
