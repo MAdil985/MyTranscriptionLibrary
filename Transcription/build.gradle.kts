@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
@@ -33,18 +34,33 @@ android {
 }
 
 dependencies {
-
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    //Google Cloud Storage
+    // Google Cloud Storage
     implementation("com.google.cloud:google-cloud-storage:2.19.0")
-    //speech to text
+    // Speech to text
     implementation("com.google.cloud:google-cloud-speech:4.9.0")
-    //Google auth libraries
+    // Google auth libraries
     implementation("com.google.auth:google-auth-library-oauth2-http:1.16.0")
     implementation("io.grpc:grpc-okhttp:1.51.1")
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("MAdil985") {
+            groupId = "com.audio.transcription"
+            artifactId = "0.0.2"
+            version = "0.0.2"
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
+}
+
+
+
