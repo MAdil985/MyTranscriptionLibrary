@@ -51,7 +51,7 @@ publishing {
         create<MavenPublication>("MyTranscriptionLibrary") {
             groupId = "com.github.MAdil985"
             artifactId = "MyTranscriptionLibrary"
-            version = "0.0.3"
+            version = "0.0.5"
         }
     }
     repositories {
