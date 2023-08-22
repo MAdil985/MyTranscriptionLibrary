@@ -40,27 +40,22 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    // Google Cloud Storage
     implementation("com.google.cloud:google-cloud-storage:2.19.0")
-    // Speech to text
     implementation("com.google.cloud:google-cloud-speech:4.9.0")
-    // Google auth libraries
     implementation("com.google.auth:google-auth-library-oauth2-http:1.16.0")
     implementation("io.grpc:grpc-okhttp:1.51.1")
 }
 
 publishing {
     publications {
-        create<MavenPublication>("MAdil985") {
+        create<MavenPublication>("MyTranscriptionLibrary") {
             groupId = "com.audio.transcription"
-            artifactId = "0.0.2"
-            version = "0.0.2"
+            artifactId = "MyTranscriptionLibrary"
+            version = "0.0.3"
+
         }
     }
     repositories {
         mavenLocal()
     }
 }
-
-
-
